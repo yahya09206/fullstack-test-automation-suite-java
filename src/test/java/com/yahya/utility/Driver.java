@@ -30,7 +30,6 @@ public class Driver {
                     break;
 
                 default:
-                    obj = null;
                     System.out.println("UNKNOWN BROWSER TYPE" + browserName);
             }
             return obj;

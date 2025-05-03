@@ -17,7 +17,7 @@ public class Hooks {
 
     @Before
     public void setUpDriver(){
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
     @After
