@@ -1,4 +1,4 @@
-package com.yahya;
+package com.yahya.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +14,5 @@ public class SeleniumDryRun {
         Thread.sleep(2000);
 
         driver.quit();
-
     }
 }
