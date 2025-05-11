@@ -34,7 +34,13 @@
             <scope>test</scope>
             <version>7.22.1</version>
         </dependency>
-        <!-- WebDriverManager -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>7.19.0</version>
+        </dependency>
+
+        <!-- platform --><!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -72,6 +78,4 @@
             <version>1.18.38</version>
         </dependency>
     </dependencies>
-
-
 </project>
