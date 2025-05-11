@@ -4,8 +4,8 @@ package com.yahya.tests;
 /**
  * open chrome and navigate to http://zero.webappsecurity.com/
  * verify the title is Zero - Personal Banking - Loans - Credit Cards with if statement
- * click on signin button
- * verify the title is “Zero- Log in”
+ * click on sign in button
+ * verify the title is “Zero - Log in”
  * enter text as “username” into username box
  * enter text “password” into password box
  * submit by clicking login button
