@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import javax.swing.*;
 import java.util.List;
 
 
@@ -34,10 +33,7 @@ public class Google {
         driver.get("https://google.com");
 
         WebElement searchBox = driver.findElement(By.xpath("//div/textarea[@name='q']"));
-        searchBox.sendKeys("selenium");
-
-        WebElement searchBtn = driver.findElement(By.xpath("//div/center/input[@name='btnK']"));
-        searchBtn.sendKeys("selenium", Keys.ENTER);
+        searchBox.sendKeys("selenium", Keys.ENTER);
 
         List<WebElement> listOfSelenium = driver.findElements(By.partialLinkText("selenium"));
         System.out.println("listOfSelenium.size() = " + listOfSelenium.size());
