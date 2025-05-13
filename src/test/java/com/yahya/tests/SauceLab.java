@@ -30,6 +30,12 @@ public class SauceLab {
         WebElement password = driver.findElement(By.xpath("//div/form/input[@id='password']"));
         password.sendKeys("secret_sauce", Keys.ENTER);
 
+        if (driver.getTitle().equals("Swag Labs")){
+            System.out.println("On the correct Page " + driver.getTitle());
+        } else {
+            System.out.println("Wrong page: " + driver.getTitle());
+        }
+
         Thread.sleep(2000);
         driver.quit();
 
