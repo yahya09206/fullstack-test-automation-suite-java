@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class LocatingDropdownList {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -30,6 +30,18 @@ public class LocatingDropdownList {
 
         yearSelectObj.selectByVisibleText("1990");
 
+        Thread.sleep(2000);
+
+        // TODO: Select the months dropdown
+        WebElement monthDropdown = driver.findElement(By.id("month"));
+
+        Select monthSelectObj = new Select(monthDropdown);
+
+        monthSelectObj.selectByIndex(4);
+        Thread.sleep(2000);
+        monthSelectObj.selectByValue("7");
+        Thread.sleep(2000);
+        monthSelectObj.selectByVisibleText("December");
         Thread.sleep(2000);
 
         driver.quit();
