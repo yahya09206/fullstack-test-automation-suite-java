@@ -27,6 +27,14 @@ public class SelectingMultipleFromDropdown {
         langSelectObj.selectByVisibleText("Java");
         Thread.sleep(2000);
 
+
+        langSelectObj.deselectByIndex(2);
+        Thread.sleep(2000);
+        langSelectObj.deselectByValue("c");
+        Thread.sleep(2000);
+        langSelectObj.deselectByVisibleText("Java");
+        Thread.sleep(2000);
+
         driver.quit();
     }
 }
