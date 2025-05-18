@@ -28,6 +28,12 @@ public class FindElementByCssSelector {
 
         Thread.sleep(2000);
 
+        searchBox.sendKeys("selenium");
+
+        driver.findElement(By.cssSelector("button#sbq-submit>span")).click();
+
+        Thread.sleep(2000);
+
         driver.quit();
 
     }
