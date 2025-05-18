@@ -23,6 +23,11 @@ public class FindElementByCssSelector {
 
         Thread.sleep(2000);
 
+        // clear text box
+        driver.findElement(By.cssSelector("button#sbq-clear>span")).click();
+
+        Thread.sleep(2000);
+
         driver.quit();
 
     }
