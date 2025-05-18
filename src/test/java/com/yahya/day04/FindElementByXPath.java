@@ -13,7 +13,7 @@ public class FindElementByXPath {
         WebDriver driver = new ChromeDriver();
         driver.get("https://practice.cydeo.com/");
 
-        WebElement header1 = driver.findElement(By.xpath("//h1/span[@class='h1y']"));
-        System.out.println("header1.getText() = " + header1.getText());
+        WebElement headerSpan = driver.findElement(By.xpath("//h1/span[@class='h1y']"));
+        System.out.println("headerSpan.getText() = " + headerSpan.getText());
     }
 }
