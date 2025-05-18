@@ -11,9 +11,12 @@ public class FindElementByXPath {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.get("https://practice.cydeo.com/");
+        driver.get("https://practice.cydeo.com/checkboxes");
 
-        WebElement headerSpan = driver.findElement(By.xpath("//h1/span[@class='h1y']"));
-        System.out.println("headerSpan.getText() = " + headerSpan.getText());
+//        WebElement headerSpan = driver.findElement(By.xpath("//h1/span[@class='h1y']"));
+//        System.out.println("headerSpan.getText() = " + headerSpan.getText());
+
+        // //input[@id="box1"]
+        driver.findElement(By.xpath("//input[@name=\"checkbox1\"]")).click();
     }
 }
