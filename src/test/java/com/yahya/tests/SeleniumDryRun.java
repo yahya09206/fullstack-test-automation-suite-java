@@ -15,4 +15,5 @@ public class SeleniumDryRun {
 
         driver.quit();
     }
+
 }

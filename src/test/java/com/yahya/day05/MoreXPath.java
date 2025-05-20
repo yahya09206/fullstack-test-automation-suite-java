@@ -1,4 +1,4 @@
-package com.yahya.day5;
+package com.yahya.day05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
