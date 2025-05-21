@@ -26,7 +26,15 @@ public class JavascriptAlerts extends TestBase {
          * .alert() method will return an Alert type from Selenium
          */
         driver.findElement(By.xpath("//button[.='Click for JS Alert']")).click();
+        System.out.println("driver.switchTo().alert().getText() = " + driver.switchTo().alert().getText());
 
+        driver.switchTo().alert().accept();
+
+        driver.findElement(By.xpath("//button[.='Click for JS Confirm']")).click();
+        driver.switchTo().alert().dismiss();
+
+        driver.findElement(By.xpath("//button[.='Click for JS Prompt']")).click();
+        driver.switchTo().alert().sendKeys("yes");
         driver.switchTo().alert().accept();
 
         System.out.println("THE END");
