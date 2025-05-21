@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class TestBase {
 
     protected WebDriver driver;
@@ -14,6 +16,7 @@ public class TestBase {
 //        driver = new ChromeDriver();
 
         driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterEach
