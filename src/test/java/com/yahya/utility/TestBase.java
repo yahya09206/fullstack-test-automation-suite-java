@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBase {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeEach
     public void setupWebDriver(){

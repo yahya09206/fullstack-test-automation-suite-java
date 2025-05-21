@@ -1,30 +1,13 @@
 package com.yahya.tests.day06;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
+import com.yahya.utility.TestBase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginFormValidation {
+public class LoginFormValidation extends TestBase {
 
-    WebDriver driver;
-
-    @BeforeAll
-    public static void setupDriver(){
-        WebDriverManager.chromedriver().setup();
-    }
-
-    @BeforeEach
-    public void setupWebDriver(){
-        driver = new ChromeDriver();
-    }
-
-    @AfterEach
-    public void closeBrowser(){
-        driver.quit();
-    }
 
     @Test
     public void testForLogin() throws InterruptedException {
