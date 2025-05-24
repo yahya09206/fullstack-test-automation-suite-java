@@ -49,6 +49,12 @@ public class WebOrderTest extends TestBase {
         // wrap above code into method inside of WebOrderUtil
         // loginErrorMsgVisible
         assertTrue(WebOrderUtil.loginErrorMsgVisible());
+    }
 
+    @Test
+    public void demonstratingBrowserCloseIssue(){
+
+        WebOrderUtil.openWebOrderApp();
+        Driver.getDriver().get("https://www.google.com");
     }
 }

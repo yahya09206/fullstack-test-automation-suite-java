@@ -21,6 +21,7 @@ public class TestBase {
 
     @AfterEach
     public void closeBrowser(){
-        driver.quit();
+        // quit the driver + make it null
+        Driver.closeBrowser();
     }
 }

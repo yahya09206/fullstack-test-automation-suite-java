@@ -11,6 +11,10 @@ public class Driver {
 
     private Driver(){}
 
+    /**
+     * Return obj with only one WebDriver instane
+     * @return
+     */
     public static WebDriver getDriver(){
 
         if (obj == null){
@@ -21,6 +25,15 @@ public class Driver {
         } else {
             System.out.println("Already exists");
             return obj;
+        }
+    }
+
+    public static void closeBrowser(){
+        // check if we have webdriver instance
+        // if not null then quit the browser then make it null
+        if (obj != null){
+            obj.quit();
+            obj = null; // new driver instance after previous one is quit
         }
     }
 }
