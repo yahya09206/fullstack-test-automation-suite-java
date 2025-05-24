@@ -23,8 +23,9 @@ public class ExplicitWaitTest extends TestBase {
 
         // wait until the title loads
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        wait.until(ExpectedConditions.titleIs("Dynamic Title"));
+        wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
+        System.out.println("END");
 
     }
 }
