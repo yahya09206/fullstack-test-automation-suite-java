@@ -26,5 +26,23 @@ public class PropertFileReadTest {
         // now read from the properties file using key
         String helloValue = properties.getProperty("hello");
         System.out.println("helloValue = " + helloValue);
+
+        System.out.println("properties.getProperty(\"message\") = " + properties.getProperty("message"));
+
+        System.out.println("properties.getProperty(\"weborder_url\") = " + properties.getProperty("weborder_url"));
+    }
+
+    @Test
+    public void testReadWithTryCatch(){
+
+        try {
+            FileInputStream inputStream = new FileInputStream("config.properties");
+            Properties properties = new Properties();
+            properties.load(inputStream);
+            inputStream.close();
+            System.out.println("properties.get(\"hello\") = " + properties.get("hello"));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

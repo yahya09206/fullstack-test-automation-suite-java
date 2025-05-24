@@ -6,11 +6,12 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    // Declare properties object at class level so it can be accessible in static method
+    // Declaring properties object at class level so it can be accessed in static method
     private static Properties properties = new Properties();
 
+    // only need to load once so use a static block
     static {
-        try{
+        try {
             FileInputStream inputStream = new FileInputStream("config.properties");
             properties.load(inputStream);
             inputStream.close();
@@ -20,9 +21,10 @@ public class ConfigReader {
     }
 
     /**
-     * Read from file
+     * Get the value of key according to the key provided
+     *
      */
-    public static String read(String key) {
+    public static String read(String key){
         return properties.getProperty(key);
     }
 }
