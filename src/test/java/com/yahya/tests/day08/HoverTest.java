@@ -69,4 +69,26 @@ public class HoverTest extends TestBase {
                 .perform();
 
     }
+
+    @Test
+    public void testDoubleClick(){
+
+        driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_ondblclick");
+
+        // double-click on paragraph
+        // then assert the new paragraph with the hello world text is visible
+        BrowserUtil.waitFor(2);
+        driver.switchTo().frame("iframeResult");
+        WebElement paragraphElmOne = driver.findElement(By.xpath("//p[.='Double-click this paragraph to trigger a function.']"));
+        // new actions class instance
+        Actions actions = new Actions(driver);
+        actions.doubleClick(paragraphElmOne).perform();
+
+        BrowserUtil.waitFor(2);
+        WebElement hiddenP = driver.findElement(By.xpath("//p[@id='demo']"));
+
+        // Assert that hidden <p> is displayed
+        Assertions.assertTrue(hiddenP.isDisplayed());
+
+    }
 }
