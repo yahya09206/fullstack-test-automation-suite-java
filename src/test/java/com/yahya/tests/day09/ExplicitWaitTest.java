@@ -5,6 +5,7 @@ import com.yahya.utility.TestBase;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,7 +31,30 @@ public class ExplicitWaitTest extends TestBase {
         // different condition by waiting until spongebob image is visible on screen
         wait.until(visibilityOfElementLocated(By.xpath("//div/img[@alt='square pants']")));
 
+
+
         System.out.println("END");
 
+    }
+
+    @Test
+    public void testByTextToBe(){
+
+        driver.get("https://practice.cydeo.com/dynamic_loading");
+
+        // click on example 7
+        driver.findElement(By.partialLinkText("Example 7:")).click();
+
+        WebElement alertArea = driver.findElement(By.id("alert"));
+        System.out.println("alertArea.getText() = " + alertArea.getText());
+
+        // wait until the title loads
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+
+        wait.until(visibilityOfElementLocated(By.xpath("//img[@alt='square pants']")));
+
+        alertArea = driver.findElement(By.id("alert"));
+
+        System.out.println("alertArea.getText() = " + alertArea.getText());
     }
 }
