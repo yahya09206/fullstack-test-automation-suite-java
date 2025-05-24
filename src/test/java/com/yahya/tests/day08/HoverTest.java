@@ -63,6 +63,9 @@ public class HoverTest extends TestBase {
         actions.keyDown(Keys.SHIFT).sendKeys("i love selenium")
                 .pause(2000).keyUp(Keys.SHIFT)
                 .sendKeys("i love selenium").pause(2000)
+                .keyDown(Keys.COMMAND).sendKeys("A") // select all text
+                .keyUp(Keys.COMMAND).pause(2000)
+                .sendKeys(Keys.BACK_SPACE)
                 .perform();
 
     }
