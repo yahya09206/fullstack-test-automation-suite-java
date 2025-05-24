@@ -1,14 +1,16 @@
 package com.yahya.tests.day09;
 
+import com.yahya.utility.Driver;
 import org.junit.jupiter.api.Test;
 
 public class SingletonTest {
 
     @Test
-    public void testSingleton(){
+    public void testSingletonDriver(){
 
-        Singleton s1 = new Singleton();
-        s1.oneWord = "abc";
-
+        Driver.getDriver();
+        Driver.getDriver();
+        Driver.getDriver();
+        Driver.getDriver();
     }
 }

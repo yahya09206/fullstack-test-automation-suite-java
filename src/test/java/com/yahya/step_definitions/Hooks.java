@@ -20,8 +20,8 @@ public class Hooks {
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
-    @After
-    public void tearDown(){
-        Driver.closeBrowser();
-    }
+//    @After
+//    public void tearDown(){
+//        Driver.closeBrowser();
+//    }
 }
