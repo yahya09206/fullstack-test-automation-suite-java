@@ -1,5 +1,6 @@
 package com.yahya.tests.day10;
 
+import com.yahya.utility.ConfigReader;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
@@ -44,5 +45,13 @@ public class PropertFileReadTest {
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testReadingUsingUtilityClass(){
+
+        System.out.println("ConfigReader.read(\"hello\") = " + ConfigReader.read("hello"));
+        System.out.println("ConfigReader.read(\"weborder_username\") = " + ConfigReader.read("weborder_username"));
+
     }
 }
