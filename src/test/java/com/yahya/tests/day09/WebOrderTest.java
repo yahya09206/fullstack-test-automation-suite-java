@@ -12,8 +12,8 @@ public class WebOrderTest extends TestBase {
 
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx");
 
-        WebOrderUtility.login(driver);
-
+//        WebOrderUtility.login(driver);
+        WebOrderUtility.login(driver, "Tester", "test");
 
     }
 }
