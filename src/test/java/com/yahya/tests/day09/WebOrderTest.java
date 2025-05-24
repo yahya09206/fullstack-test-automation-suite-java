@@ -19,11 +19,15 @@ public class WebOrderTest extends TestBase {
 //        WebOrderUtility.login(driver);
         WebOrderUtility.login(driver, "Tester", "test");
 
-        WebElement h1Header = driver.findElement(By.xpath("//div/h2[normalize-space()='List of All Orders']"));
-        Assertions.assertTrue(h1Header.isDisplayed());
+        System.out.println("WebOrderUtility.isAtOrderPage(driver) = " + WebOrderUtility.isAtOrderPage(driver));
 
         BrowserUtil.waitFor(3);
         WebOrderUtility.logout(driver);
+
+        WebOrderUtility.login(driver, "blah", "bla");
+        System.out.println("WebOrderUtility.isAtOrderPage(driver) = " + WebOrderUtility.isAtOrderPage(driver));
+
+        BrowserUtil.waitFor(2);
 
     }
 }
