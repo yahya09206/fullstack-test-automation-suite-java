@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
+
 public class ExplicitWaitTest extends TestBase {
 
     @Test
@@ -22,8 +24,11 @@ public class ExplicitWaitTest extends TestBase {
         driver.findElement(By.partialLinkText("Example 7:")).click();
 
         // wait until the title loads
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        wait.until(ExpectedConditions.titleIs("Dynamic title"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+        //wait.until(ExpectedConditions.titleIs("Dynamic title"));
+
+        // different condition by waiting until spongebob image is visible on screen
+        wait.until(visibilityOfElementLocated(By.xpath("//div/img[@alt='square pants']")));
 
         System.out.println("END");
 
