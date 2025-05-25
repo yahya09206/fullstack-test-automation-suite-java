@@ -14,6 +14,8 @@ public class WLoginPage {
     public WebElement passwordField;
     @FindBy(xpath = "//div/input[@name='ctl00$MainContent$login_button']")
     public WebElement loginButton;
+    @FindBy(xpath = "//span[.='Invalid Login or Password.']")
+    public WebElement errorMsg;
 
     // No arg constructor to instruct selenium
     public WLoginPage(){
@@ -40,6 +42,11 @@ public class WLoginPage {
         this.passwordField.sendKeys(password);
         this.loginButton.click();
 
+    }
+
+    public boolean loginErrorMsgPresent(){
+
+        return this.errorMsg.isDisplayed();
     }
 
 }
