@@ -12,9 +12,9 @@ public class EatStepDefs {
         System.out.println("This is @Given code alice_is_hungry");
     }
     @When("she eats {int} cucumbers")
-    public void she_eats_cucumbers(Integer int1) {
+    public void she_eats_cucumbers(Integer quantity) {
 
-        System.out.println("This is @when code she_eats_cucumbers");
+        System.out.println("This is @when code she_eats_cucumbers " + quantity);
     }
     @Then("she will be full")
     public void she_will_be_full() {
