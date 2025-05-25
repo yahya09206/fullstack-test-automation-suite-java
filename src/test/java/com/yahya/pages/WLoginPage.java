@@ -33,13 +33,13 @@ public class WLoginPage {
      * @param username username
      * @param password password
      */
-//    public void login(String username, String password ){
-//
-//        // you can access directly using userNameField or this.userNameField
-//        this.usernameField.sendKeys(username);
-//        this.passwordField.sendKeys(password);
-//        this.loginButton.click();
-//
-//    }
+    public void login(String username, String password ){
+
+        // you can access directly using userNameField or this.userNameField
+        this.usernameField.sendKeys(username);
+        this.passwordField.sendKeys(password);
+        this.loginButton.click();
+
+    }
 
 }
