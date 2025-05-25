@@ -19,10 +19,10 @@ public class Driver {
 
         String browserName = ConfigReader.read("browser");
 
+        // set up driver depending on which one is chosen after object is set to null/quit
         if (obj == null){
 
-            switch (browserName.toLowerCase()){
-
+            switch (browserName){
                 // according to browser type, this will set the correct driver chrome/firefox
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
@@ -38,7 +38,7 @@ public class Driver {
             }
             return obj;
         } else {
-            System.out.println("Already exists");
+            // System.out.println("Already exists");
             return obj;
         }
     }
