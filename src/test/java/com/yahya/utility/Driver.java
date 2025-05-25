@@ -17,10 +17,25 @@ public class Driver {
      */
     public static WebDriver getDriver(){
 
+        String browserName = ConfigReader.read("browser");
+
         if (obj == null){
-            WebDriverManager.chromedriver().setup();
-            obj = new ChromeDriver();
-            System.out.println("One and only created for the first time");
+
+            switch (browserName.toLowerCase()){
+
+                // according to browser type, this will set the correct driver chrome/firefox
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    obj = new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    obj = new FirefoxDriver();
+                    break;
+                default:
+                    obj = null;
+                    System.out.println("UNKOWN BROWSER TYPE!!!" + browserName);
+            }
             return obj;
         } else {
             System.out.println("Already exists");
