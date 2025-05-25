@@ -15,7 +15,8 @@ public class TestBase {
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
 
-        driver = WebDriverFactory.getDriver("chrome");
+        driver = Driver.getDriver();
+        //driver = WebDriverFactory.getDriver("chrome");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
