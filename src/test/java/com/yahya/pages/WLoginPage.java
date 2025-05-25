@@ -1,5 +1,6 @@
 package com.yahya.pages;
 
+import com.yahya.utility.ConfigReader;
 import com.yahya.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +19,13 @@ public class WLoginPage {
     public WLoginPage(){
 
         PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    /**
+     *Method to navigate to login page
+     */
+    public void goTo(){
+        Driver.getDriver().get(ConfigReader.read("weborder_url"));
     }
 
     /**
