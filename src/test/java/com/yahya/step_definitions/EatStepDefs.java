@@ -22,4 +22,13 @@ public class EatStepDefs {
         System.out.println("This is @Then code she_will_be_full");
     }
 
+    @Given("Olivia is hungry")
+    public void olivia_is_hungry() {
+        System.out.println("@Given olivia is hungry");
+    }
+    @Then("he will be sick")
+    public void he_will_be_sick() {
+        System.out.println("@Then she will be sick");
+    }
+
 }
