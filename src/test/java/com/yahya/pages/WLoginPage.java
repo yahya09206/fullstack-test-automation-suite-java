@@ -8,16 +8,30 @@ import org.openqa.selenium.support.PageFactory;
 public class WLoginPage {
 
     @FindBy(id = "ctl00_MainContent_username")
-    private WebElement usernameField;
+    public WebElement usernameField;
     @FindBy(id = "ctl00_MainContent_password")
-    private WebElement passwordField;
+    public WebElement passwordField;
     @FindBy(xpath = "//div/input[@name='ctl00$MainContent$login_button']")
-    private WebElement loginButton;
+    public WebElement loginButton;
 
     // No arg constructor to instruct selenium
     public WLoginPage(){
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    /**
+     * Login with parameters
+     * @param username username
+     * @param password password
+     */
+//    public void login(String username, String password ){
+//
+//        // you can access directly using userNameField or this.userNameField
+//        this.usernameField.sendKeys(username);
+//        this.passwordField.sendKeys(password);
+//        this.loginButton.click();
+//
+//    }
 
 }
