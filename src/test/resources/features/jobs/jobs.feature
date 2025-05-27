@@ -6,3 +6,9 @@ Feature: Getting jobs
     And you are in the market
     When you apply for 100 jobs a day
     Then you will eventually get the job
+
+  Scenario: student applies for the job
+    Given you are prepared for a job
+    And you are in the market
+    When you apply for 50 jobs a day
+    Then you will eventually get the job
