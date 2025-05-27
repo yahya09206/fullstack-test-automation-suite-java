@@ -30,4 +30,20 @@ public class WebOrderLoginStepDefs {
         wAllOrderPage.headerElm.isDisplayed();
 
     }
+
+    @When("we provide invalid credentials")
+    public void we_provide_invalid_credentials() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("we should still be at login page")
+    public void we_should_still_be_at_login_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("login error message should be displayed")
+    public void login_error_message_should_be_displayed() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
