@@ -2,9 +2,11 @@ package com.yahya.step_definitions;
 
 import com.yahya.pages.WAllOrderPage;
 import com.yahya.pages.WLoginPage;
+import com.yahya.utility.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 
 public class WebOrderLoginStepDefs {
 
@@ -33,17 +35,16 @@ public class WebOrderLoginStepDefs {
 
     @When("we provide invalid credentials")
     public void we_provide_invalid_credentials() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        loginPage.login("testers", "test");
     }
     @Then("we should still be at login page")
     public void we_should_still_be_at_login_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assertions.assertEquals("Web Orders Login", Driver.getDriver().getTitle());
     }
     @Then("login error message should be displayed")
     public void login_error_message_should_be_displayed() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        loginPage.loginErrorMsgPresent();
     }
 }
