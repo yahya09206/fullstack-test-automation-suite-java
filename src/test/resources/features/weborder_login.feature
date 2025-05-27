@@ -16,3 +16,7 @@ Feature: Web order app login
     When we provide invalid credentials
     Then we should still be at login page
     And login error message should be displayed
+
+  Scenario: User login with specific credentials
+    When user provide username "Tester" and password "test"
+    Then we should see all orders page
