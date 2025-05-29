@@ -15,3 +15,11 @@ Feature: calculator feature
     Given calculator app is open
     When I add 5 with 4
     Then I should get result 9 displayed
+
+
+  Scenario: Add 2 numbers
+    Given calculator app is open
+    When I add 51 with 42
+    Then I should get result 93 displayed
+
+
