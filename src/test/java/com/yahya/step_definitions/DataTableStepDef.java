@@ -1,10 +1,12 @@
 package com.yahya.step_definitions;
 
+import com.yahya.pages.WLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.List;
+import java.util.Map;
 
 public class DataTableStepDef {
 
@@ -32,5 +34,15 @@ public class DataTableStepDef {
     public void iCallTheirNamesWithBelowNames(List<String> names) {
 
         System.out.println("names = " + names);
+    }
+
+    @When("we provide below credentials")
+    public void weProvideBelowCredentials(Map<String, String> credentialsMap) {
+        String usernameFromTable = credentialsMap.get("username");
+        String passwordFromTable = credentialsMap.get("password");
+
+        System.out.println("credentialsMap = " + credentialsMap);
+        WLoginPage loginPage = new WLoginPage();
+        loginPage.login(usernameFromTable, passwordFromTable);
     }
 }
