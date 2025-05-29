@@ -28,6 +28,7 @@ Feature: Demonstrating the data table feature of cucumber
 
 
 
+    @ui2
   Scenario: Login to weborder app by providing username and password in a 2 column table
     Given we are at web order login page
     When we provide below credentials

@@ -8,7 +8,7 @@ Feature: Google search page
   Background:
     Given user is at the homepage
 
-  @wip
+  @wip2
   Scenario: User searches by keyword
     Given user is at the homepage
     When user searches for keyword "selenium"
