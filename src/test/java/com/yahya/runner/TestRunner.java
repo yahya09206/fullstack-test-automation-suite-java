@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features",
                 glue = "com/yahya/step_definitions",
                 plugin = {"pretty", "html:target/cucumber_report.html"},
-                dryRun = false
+                dryRun = false,
+                tags = "@wip"
                 )
 public class TestRunner {
 }
