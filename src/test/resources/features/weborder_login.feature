@@ -17,6 +17,7 @@ Feature: Web order app login
     Then we should still be at login page
     And login error message should be displayed
 
+  @failed
   Scenario: User login with specific credentials
-    When user provide username "Tester" and password "test"
+    When user provide username "Testers" and password "test"
     Then we should see all orders page
