@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
                 glue = "com/yahya/step_definitions",
-                plugin = {"pretty", "html:target/cucumber_report.html","rerun:target/rerun.txt"},
+                plugin = {"pretty", "html:target/cucumber_report.html",
+                        "rerun:target/rerun.txt"},
                 dryRun = false,
                 tags = "@failed"
                 )
