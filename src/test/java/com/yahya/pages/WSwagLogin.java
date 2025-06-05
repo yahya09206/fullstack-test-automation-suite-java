@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 public class WSwagLogin {
 
     @FindBy(xpath = "//div/input[@id='user-name']")
-    WebElement login;
+    WebElement loginField;
     @FindBy(xpath = "//div/input[@id='password']")
-    WebElement password;
+    WebElement passwordField;
     @FindBy(xpath = "//div/input[@id='login-button']")
     WebElement submit;
 
@@ -23,5 +23,12 @@ public class WSwagLogin {
     public void goTo(){
 
         Driver.getDriver().get(ConfigReader.read("swag_url"));
+    }
+
+    public void login(String username, String password){
+
+        this.loginField.sendKeys(username);
+        this.passwordField.sendKeys(password);
+        this.submit.click();
     }
 }
