@@ -14,6 +14,8 @@ public class WSwagLogin {
     WebElement passwordField;
     @FindBy(xpath = "//div/input[@id='login-button']")
     WebElement submit;
+    @FindBy(xpath = "//span[.='Products']")
+    WebElement productsPageName;
 
     public WSwagLogin(){
 
@@ -30,5 +32,11 @@ public class WSwagLogin {
         this.loginField.sendKeys(username);
         this.passwordField.sendKeys(password);
         this.submit.click();
+    }
+
+    public boolean verifyProductsPage(){
+
+        return this.productsPageName.isDisplayed();
+
     }
 }
