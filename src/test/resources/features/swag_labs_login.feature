@@ -7,7 +7,8 @@ Feature: Logging into swag labs web app
     # data table for multiple users
     Given user is at swab labs login page
     When user uses username "<email>" and passcode "<password>"
-    Then user should be at dashboard page
     Examples:
       | email         | password     |
       | standard_user | secret_sauce |
+    Then Then we should see all orders page
+
