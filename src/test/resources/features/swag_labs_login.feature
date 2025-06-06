@@ -6,7 +6,7 @@ Feature: Logging into swag labs web app
 
     # data table for multiple users
     Given user is at swab labs login page
-    When user uses username "<email>" and passcode "<password>"
+    When user enters username "<email>" and passcode "<password>"
     Then Then we should see all orders page
     Examples:
       | email         | password     |
