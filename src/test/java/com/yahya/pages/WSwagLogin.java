@@ -12,7 +12,7 @@ public class WSwagLogin {
     WebElement loginField;
     @FindBy(xpath = "//div/input[@id='password']")
     WebElement passwordField;
-    @FindBy(xpath = "//div/input[@id='login-button']")
+    @FindBy(xpath = "//div/form/input[@id='login-button']")
     WebElement submit;
     @FindBy(xpath = "//span[.='Products']")
     WebElement productsPageName;

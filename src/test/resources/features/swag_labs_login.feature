@@ -1,3 +1,4 @@
+@swag
 Feature: Logging into swag labs web app
   As a user
   I should be able to login to swag labs web app

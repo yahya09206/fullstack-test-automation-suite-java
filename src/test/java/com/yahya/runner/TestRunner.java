@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 glue = "com/yahya/step_definitions",
                 plugin = {"pretty", "html:target/cucumber_report.html",
                         "rerun:target/rerun.txt"},
-                dryRun = true,
-                tags = "@failed"
+                dryRun = false,
+                tags = "@swag"
                 )
 public class TestRunner {
 }
