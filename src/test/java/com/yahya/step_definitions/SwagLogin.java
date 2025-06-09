@@ -13,6 +13,7 @@ public class SwagLogin {
     @Given("user is at swab labs login page")
     public void user_is_at_swab_labs_login_page() {
 
+        // login method for swag labs
         wSwagLogin.goTo();
     }
 
