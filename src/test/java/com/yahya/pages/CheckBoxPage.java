@@ -26,10 +26,10 @@ public class CheckBoxPage {
 
         boolean isChecked = false;
 
-        if (this.checkbox1.isSelected()){
-            return true;
+        if (!this.checkbox1.isSelected()){
+            checkbox1.click();
         }else {
-            this.checkbox1.click();
+            System.out.println("Box is already selected!");
         }
 
         return isChecked;
