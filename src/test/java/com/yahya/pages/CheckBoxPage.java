@@ -15,4 +15,10 @@ public class CheckBoxPage {
     public CheckBoxPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    public void goTo(){
+
+        Driver.getDriver().get("https://practice.cydeo.com/checkboxes");
+
+    }
 }
