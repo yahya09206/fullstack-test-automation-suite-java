@@ -21,4 +21,18 @@ public class CheckBoxPage {
         Driver.getDriver().get("https://practice.cydeo.com/checkboxes");
 
     }
+
+    public boolean select(){
+
+        boolean isChecked = false;
+
+        if (this.checkbox1.isSelected()){
+            return true;
+        }else {
+            this.checkbox1.click();
+        }
+
+        return isChecked;
+
+    }
 }
