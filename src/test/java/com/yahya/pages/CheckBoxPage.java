@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckBoxPage {
 
-    @FindBy(name = "//input[@name='checkbox1']")
+    @FindBy(xpath = "//input[@name='checkbox1']")
     public WebElement checkbox1;
-    @FindBy(name = "//input[@name='checkbox2']")
+    @FindBy(xpath = "//input[@name='checkbox2']")
     public WebElement checkbox2;
 
     public CheckBoxPage(){
@@ -22,17 +22,14 @@ public class CheckBoxPage {
 
     }
 
-    public boolean select(){
+    public void selectBox(){
 
-        boolean isChecked = false;
 
-        if (!this.checkbox1.isSelected()){
+        if (checkbox1.isSelected()){
             checkbox1.click();
         }else {
             System.out.println("Box is already selected!");
         }
-
-        return isChecked;
 
     }
 }
