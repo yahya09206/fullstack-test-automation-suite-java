@@ -13,7 +13,7 @@ public class CheckBoxTest extends TestBase {
         CheckBoxPage checkBoxPage = new CheckBoxPage();
 
         checkBoxPage.goTo();
-        checkBoxPage.selectBox();
+        checkBoxPage.selectBox1();
         BrowserUtil.waitFor(3);
 
         driver.quit();

@@ -22,7 +22,7 @@ public class CheckBoxPage {
 
     }
 
-    public void selectBox(){
+    public void selectBox1(){
 
 
         if (!this.checkbox1.isSelected()){
