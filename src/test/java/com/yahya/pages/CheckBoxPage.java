@@ -25,8 +25,8 @@ public class CheckBoxPage {
     public void selectBox(){
 
 
-        if (checkbox1.isSelected()){
-            checkbox1.click();
+        if (!this.checkbox1.isSelected()){
+            this.checkbox1.click();
         }else {
             System.out.println("Box is already selected!");
         }
