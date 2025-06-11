@@ -10,6 +10,7 @@ public class CheckBoxTest extends TestBase {
     @Test
     public void checkIfSelected(){
 
+        // new instance of checkbox page object
         CheckBoxPage checkBoxPage = new CheckBoxPage();
 
         checkBoxPage.goTo();
