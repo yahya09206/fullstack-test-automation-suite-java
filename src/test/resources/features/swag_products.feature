@@ -4,3 +4,5 @@ Feature: Viewing swag labs products page
 
   Scenario: View all products
     Given I'm at the products page
+    When I view all of the items
+    Then I should see "9" items
