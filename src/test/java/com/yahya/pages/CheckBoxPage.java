@@ -25,6 +25,7 @@ public class CheckBoxPage {
     public void selectBox1(){
 
 
+        //condition to check if box is selected or not
         if (!this.checkbox1.isSelected()){
             this.checkbox1.click();
         }else {
