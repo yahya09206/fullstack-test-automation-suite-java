@@ -29,6 +29,7 @@ public class CheckBoxPage {
         if (!this.checkbox1.isSelected()){
             this.checkbox1.click();
         }else {
+            // message if box is already selected
             System.out.println("Box is already selected!");
         }
 
